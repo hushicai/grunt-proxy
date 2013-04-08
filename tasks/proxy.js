@@ -20,9 +20,7 @@ module.exports = function(grunt) {
         } else if (options.router) {
 			httpProxy.createServer( { router:options.router} ).listen( options.port );
             Object.keys(options.router).forEach(function(route) {
-                
                 grunt.log.writeln('Starting proxy router on "' + route + '" to "' + options.router[route] + '".');
-            
             });
         }
 	});
